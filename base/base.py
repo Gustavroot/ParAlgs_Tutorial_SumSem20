@@ -17,7 +17,7 @@ def luDecomposer(params, M):
 
     alg_split = params['alg'].split('_')
     if alg_split[0] != 'ge':
-        print("Only Gaussian-Elimination supported for LU decomposition.")
+        raise Exception("Only Gaussian-Elimination supported for LU decomposition.")
     ijk_form = alg_split[1]
 
     if ijk_form not in ijk_forms:
